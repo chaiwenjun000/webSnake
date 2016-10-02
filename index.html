@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>Snake</title>
+    <style type="text/css">
+        body{
+            background: #dddddd;
+        }
+        #canvas1{
+            border:#8b4513 solid 5px;
+            border-radius:5px;
+            margin: :10px;
+            background: #ffffff;
+            display:block;
+        }
+        #main{
+            width:720px;
+            height:480px;
+            margin:10px auto;
+            border:#8b4513 solid 5px;
+            border-radius:5px;
+            position:relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id=container>
+        <center>
+             <button  id=startGame>Start Game</button>
+            <canvas id="canvas1" width="720" height="480">
+                 canvas not supported
+             </canvas>
+             <span >Score</span>
+              <input type="text" id=score name=score disabled="disabled">
+
+            <span >Level</span>
+            <input type="text"  id=level name=level disabled="disabled">
+        </center>
+    </div>
+</body>
+ <script type="text/javascript" src="mymain.js"></script>
+  <script src="../bootstrap/js/jquery.min.js"></script>
+    <script type="text/javascript">
+         var canvas = document.getElementById('canvas1');
+         var ctxt = canvas.getContext('2d');
+         document.addEventListener('keydown',keyDownCheck,false);
+        $("#startGame").click(function(){
+            beginGame(1);
+        });
+    </script>
+    
+      
+</html>
