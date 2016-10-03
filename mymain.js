@@ -42,9 +42,9 @@ function draw(level){
   }
   
 }
-function keyDownCheck(){
-  var e=event||window.event||arguments.callee.caller.arguments[0];
- // alert(e.keyCode);
+function keyDownCheck(event){
+  var e= event||window.event||arguments.callee.caller.arguments[0];
+  //alert(e.keyCode);
   if(e.keyCode == 87 || e.keyCode == 38){ // up
     if(snake.dir == 2)
       return;
